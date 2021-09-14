@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "workspaces": [
+    "ui",
+    "shared",
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "build": "cd client && yarn build && cd .. && cd server && yarn build && cd .. && cd ui && yarn build && echo 'Built'",
+    "watch:ui": "cd ui && yarn watch:game",
+    "watch:client": "cd client && yarn watch",
+    "watch:server": "cd server && yarn watch"
+  }
+}
