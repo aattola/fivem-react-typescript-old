@@ -1,4 +1,6 @@
 const path = require('path');
+const RemovePlugin = require('remove-files-webpack-plugin');
+const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
   devServer: {
@@ -19,6 +21,15 @@ module.exports = {
       }
 
       webpackConfig.output.path = path.join(__dirname, 'dist');
+      webpackConfig.plugins = [
+        ...webpackConfig.plugins,
+
+        new RemovePlugin({
+          before: {
+            include: [path.resolve(buildPath)],
+          },
+        }),
+      ];
 
       return webpackConfig;
     },
