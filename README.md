@@ -23,15 +23,11 @@ Includes Eslint for client server and ui with typechecking.
 
 ``yarn watch:ui`` Launches web browser with UI. You can also develop in game with this mode.
 
-``yarn watch:client`` Starts watching for changes in client and rebuilds on change. Works also in game.
-
-``yarn watch:server`` Starts watching for changes in server and rebuilds on change. Works also in game.
+``yarn watch:app`` Starts watching for changes in client and server. Rebuilds on change. Works also in game.
 
 ## Building
 
 ``yarn build``
-
-**NOTE:** This command will give out error code 1. Even if the build was success. If the last lines read: "File sizes after gzip:" then the build was success.
 
 
 ## Acknowledgements
