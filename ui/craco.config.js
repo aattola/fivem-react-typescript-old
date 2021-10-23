@@ -42,4 +42,11 @@ module.exports = {
 
     return devServerConfig;
   },
+   eslint: {
+    mode: ESLINT_MODES.extends,
+    configure: () =>
+      // Workaround for broken ESLINT_MODES.file mode
+      require('./.eslintrc.json'),
+
+  },
 };
